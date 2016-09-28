@@ -285,7 +285,7 @@ octave:37> f = @(t) ([sin(t); cos(t)]);
 octave:38> g = @(t) ([t; t.^2]);
 octave:39> ts = 0:.25:pi;
 octave:40> vec_f = f(ts);
-octave:41> vec_g = f(ts);
+octave:41> vec_g = g(ts);
 octave:42> plot(vec_f(1,:), vec_f(2,:), '-')
 octave:43> hold on
 octave:44> plot(vec_g(1,:), vec_g(2,:), '-')
@@ -324,7 +324,7 @@ end
 if `\mlplaceholder{variable}` == `\mlplaceholder{value}`,
     `\mlplaceholder{if contents}`
 end
-\end{lstlisting}[style=Matlab-Pyglike,escapechar=`]
+\end{lstlisting}
 	syntax (note the double equals). 
 
 	For example, if we wanted $x$ to be the sum of the squares of only the even numbers between 1 and 15, we might write:
