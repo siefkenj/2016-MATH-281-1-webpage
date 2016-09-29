@@ -1,0 +1,93 @@
+\documentclass[letter]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{ifthen}
+\usepackage{fancyhdr}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{changepage}
+\graphicspath{{images/}}
+\usepackage[hidelinks]{hyperref}
+
+%%%
+% Set up the margins to use a fairly large area of the page
+%%%
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=6in
+\topmargin=0in
+\parskip=.07in
+\parindent=0in
+\pagestyle{fancy}
+
+\expandafter\def\expandafter\quote\expandafter{\quote\sf\color{DarkGreen}}
+
+%%%
+% Set up the header
+%%%
+\newcommand{\setheader}[2]{
+	\lhead{{\sc #1}\\{\sc #2} %({\small \it \today})
+	}
+}
+
+%%%
+% Set up some shortcut commands
+%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Proj}{\mathrm{proj}}
+\newcommand{\Perp}{\mathrm{perp}}
+\newcommand{\Span}{\mathrm{span}}
+\newcommand{\Null}{\mathrm{null}}
+\newcommand{\Rank}{\mathrm{rank}}
+\newcommand{\Range}{\mathrm{range}}
+\newcommand{\Det}{\mathrm{det}}
+\newcommand{\mat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\Rref}{\mathrm{rref}}
+\renewcommand{\d}{\mathrm{d}}
+
+\DeclareMathOperator{\arccot}{arccot}
+
+\newenvironment{answer}{
+	\begin{adjustwidth}{8mm}{} \vspace{2mm}}{\end{adjustwidth} \vspace{2mm}
+}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{claim}{Claim}
+
+%%%
+% This is where the body of the document goes
+%%%
+\begin{document}
+	\setheader{Math 281-1}{Parametric Forms Practice Problems}
+	
+	Problems are from Stewart's \textit{Essential Calculus: Early Transcendentals 2nd Ed.} or from Evans's \textit{ISP Mathematics 281 Volume I}. 	
+	
+	\begin{enumerate}
+		\item Stewart 10.5 3,5
+		\item Stewart 10.5 6,7
+		\item Stewart 10.5 11, 12
+		\item Stewart 10.5 15, 16
+		\item Stewart 10.5 21, 24, 25
+		\item Stewart 10.5 39
+		\item Stewart 10.5 42
+		\item Stewart 10.5 59
+		\item Evans 1.5 1
+		\item Evans 1.5 3
+		\item Evans 1.5 5
+		\item Evans 1.5 6
+		\item Evans 1.5 9
+	\end{enumerate}
+\end{document}
