@@ -49,78 +49,73 @@
 % This is where the body of the document goes
 %%%
 \begin{document}
-	\setheader{Math 281-1}{Homework 3}{Due: Thursday, October 29}{}{}{}
+	\setheader{Math 281-1}{Homework 3}{Due: Friday, October 14}{}{}{}
 	\begin{enumerate}
-		\item You are designing an oval-shaped race track.  The race track consists of two
-			straight stretches of length 500 meters and two semicircles of radius 100 meters.
-			On a straight stretch, a car attains a maximum speed of 100 meters per second (near the end of the straight stretch).
-			When traveling along a curved stretch, a car experiences a constant deceleration
-			and leaves the curved stretch going 50 meters per second.
-
-			Since you don't want cars to slide off the track as they travel along the curved part
-			of the track, you plan on angling the curved part of the road (like a real race track).
-			Assuming there is no friction (so the only forces a car is subjected to are the acceleration
-			due to its movement and the acceleration due to gravity), compute the angle of elevation of
-			the curved part of the race track so that a car won't slide off (Hint, this won't be constant!).
-
-			You may assume that the acceleration due to gravity is $g$ meters per second squared.
-
-		\item Given a curve $S\subset \R^n$, the \emph{curvature} of $S$ at the point $\vec p\in S$ is the
-			magnitude of the acceleration when passing through $\vec p$ at unit speed (following the curve $S$).
-			That is, if $\vec r(t)$ is an arc length parameterization of $S$ and $\vec r(t_0) = \vec p$, 
-			then the curvature of $S$ at the point $\vec p$ would be $\|\vec a(t_0)\|$.
-
+		\item Let $L\subset \R^3$ be the line that passes through the points $(0,0,0)$ and $(1,2,3)$
+			and let $E\subset \R^2$ be ellipse, centered at the origin, with major axis along
+			the $x$-axis, minor axis along the $y$-axis, major radius of $2$ and a minor radius of $1$.
 			\begin{enumerate}
-				\item Let $S_r\subset \R^2$ be a circle of radius $r$ centered at the origin.  
-					Compute the curvature 
-					of $S_r$ at the point $\vec p=(r,0)$.
-				\item Given the following points that lie on the curve $C\subset \R^2$, estimate the curvature
-					of $C$ at $(1,1)$.
-
-					\begin{center}
-					\begin{tabular}{c|c}
-						$x$&$y$\\
-						\hline
-						0.7&0.49\\
-						0.8&0.64\\
-						0.9&0.81\\
-						1&1\\
-						1.1&1.21\\
-						1.2&1.44\\
-						1.3&1.69
-					\end{tabular}
-				\end{center}
+				\item Find three different parameterizations of $L$, $\vec p_1,\vec p_2,\vec p_3$ where
+					$\vec p_1$ is an arc-length parameterization, $\vec p_2$ is a parameterization
+					that moves at speed $2$, and $\vec p_3$ is a parameterization that passes through
+					the point $(0,0,0)$ at speed 1 and $(1,2,3)$ at speed 2.  Make sure to specify the domains
+					of each parameterization.
+				\item Find a parameterization of $L$ by $(0,1)$ (the open unit interval).  Can you find a
+					parameterization of $L$ by $[0,1]$ (the closed unit interval)?  Explain.
+				\item Find a parameterization of $E$.  Make sure to specify its domain.
+				\item Find a parameterization $\vec p$ of $E$ by $[0,1)$ with the added property
+						that 
+						\[
+							\|\vec p'(0)\|=\lim_{t\to 1^-}\|\vec p'(t)\|=1.
+						\] In your answer,
+						you may use $C$ to stand for the circumference of the ellipse $E$.
+					(\emph{Hint: there are many answers; some of them involve piecewise functions}.)
 			\end{enumerate}
+		\item An \emph{isometric parameterization} of a 2D surface $S$ is a parameterization $p(t,s)$
+			that is length preserving \emph{and} area preserving.
+			That is, the speed with respect to the first variable
+			is $1$, the speed with respect to the second variable is $1$, and the area of the image
+			of the square with corners $(\alpha,\beta),(\alpha+1,\beta),(\alpha,\beta+1),(\alpha+1,\beta+1)$ is 1.
 
-		\item 
+			Consider the surface $S\subset \R^3$ parameterized by \[
+				s(x,y) = (x^2,y, |y|^{3/2}).
+			\]
+			Produce an isometric parameterization $p:\R^2\to\R^3$ and verify each 
+			property of the parameterization. (Hint, use a computer to visualize the surface
+			and imagine it as a piece of paper.  Now choose easy direction vectors to 
+			parameterize with.  Also, don't forget that $\|\vec a\times \vec b\|$ gives you
+			the area of the parallelogram with sides $\vec a$ and $\vec b$.)
+
+		\item In homework 2, you developed a theory of line integrals working directly with limits
+			and Riemann sums.  Most textbooks present the theory of line integrals as follows:
+			\begin{quote}
+				Suppose $C\subset \R^2$ is a one dimensional curve with parameterization
+				$\vec p:[a,b]\to \R^2$, and let $f:\R^2\to \R$ be a scalar-valued function.
+				Then,
+				\[
+					\int_C f = \int_a^b f(\vec p(t))\|\vec p'(t)\|\mathrm{d}t,
+				\]
+				where $\int_C f$ is the signed area above the curve $C$ and below the surface
+				$(x,y,f(x,y))$.
+			\end{quote}
+
+			Your task is to explain where this formula comes from using the foundational ideas of integral
+			calculus: Riemann sums and limits.  You may work with a partner and turn in one writeup
+			between the two of you, or you may work individually. 
+			Your explanation should be typed in \LaTeX{} and include
+			the following:
 			\begin{enumerate}
-				\item The level curves of the function $f:\R^2\to [0,\infty)$ are given 
-					in polar coordinates by the function
-					$L(h)=\{(\theta, h):\theta\in [0,2\pi)\}$.  That is, 
-						$L(h)$ gives the level curve $f(x,y)=h$.  Graph the level curves
-						of $f$ and then make a 3d
-						sketch of the surface $(x,y,f(x,y))$.
-					\item The level curves of $g:\R^2\to [1,\infty)$ are given in polar coordinates by the function
-							$L(h)=\{(\theta, \sin(\theta)/h):\theta\in(0,\pi)\}$.
-							Graph the level curves of $g$ and then make a 3d sketch of $(x,y,g(x,y))$.
+				\item justification for any Riemann sums or limits you use;
+				\item at least one example of a line integral;
+				\item a discussion (it can be brief, or extended) about the special case of arclength
+					parameterizations in relation to line integrals;
+				\item appropriate citations if you used external resources (the \verb|\footnote{...}|
+					command is your friend!).
 			\end{enumerate}
-		\item Determine the following limits if they exist, otherwise show they don't exist.
-			\begin{enumerate}
-				\item $\displaystyle\lim_{(x,y)\to(0,0)} x+y$
-				\item $\displaystyle\lim_{(x,y)\to(0,0)} \frac{x^2-y^2}{x^2+y^2}$
-				\item $\displaystyle\lim_{(x,y)\to(0,0)} \frac{x^2y}{x^4+y^2}$
-			\end{enumerate}
-
-		\item We've seen that for a function $f$ and a direction $\vec u$, $\nabla f(\vec a)\cdot \vec u$ gives
-			the directional derivative at $\vec a$ in the direction $\vec u$ \emph{if $f$ is differentiable}.
-			This last part is key.
-
-			Let $f(x,y) = \frac{x^2y}{x^2+y^2}$ if $(x,y)\neq (0,0)$ and $f(0,0) = 0$.  Use the definition
-			of the directional derivative to compute the directional derivative of $f$ at $(0,0)$ in the direction
-			$\vec u$.  Can the directional derivative be written as $\nabla f(0,0)\cdot \vec u$ for all $\vec u$?
-			How about for some $\vec u$?
-
-			Show that $f$ is not differentiable at $(0,0)$.
+			You are strongly encouraged to include pictures.  Your target audience is a student
+			who just completed integral calculus.  
+			Your writeup will be graded both on correctness
+			and on how well you explain/present the topic.
 	\end{enumerate}
 
 \end{document}
