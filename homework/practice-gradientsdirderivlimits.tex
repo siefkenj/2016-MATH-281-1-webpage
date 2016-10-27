@@ -1,0 +1,105 @@
+\documentclass[letter]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{ifthen}
+\usepackage{fancyhdr}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{changepage}
+\graphicspath{{images/}}
+\usepackage[hidelinks]{hyperref}
+
+%%%
+% Set up the margins to use a fairly large area of the page
+%%%
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=6in
+\topmargin=0in
+\parskip=.07in
+\parindent=0in
+\pagestyle{fancy}
+
+\expandafter\def\expandafter\quote\expandafter{\quote\sf\color{DarkGreen}}
+
+%%%
+% Set up the header
+%%%
+\newcommand{\setheader}[2]{
+	\lhead{{\sc #1}\\{\sc #2} %({\small \it \today})
+	}
+}
+
+%%%
+% Set up some shortcut commands
+%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Proj}{\mathrm{proj}}
+\newcommand{\Perp}{\mathrm{perp}}
+\newcommand{\Span}{\mathrm{span}}
+\newcommand{\Null}{\mathrm{null}}
+\newcommand{\Rank}{\mathrm{rank}}
+\newcommand{\Range}{\mathrm{range}}
+\newcommand{\Det}{\mathrm{det}}
+\newcommand{\mat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\Rref}{\mathrm{rref}}
+\renewcommand{\d}{\mathrm{d}}
+
+\DeclareMathOperator{\arccot}{arccot}
+
+\newenvironment{answer}{
+	\begin{adjustwidth}{8mm}{} \vspace{2mm}}{\end{adjustwidth} \vspace{2mm}
+}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{claim}{Claim}
+
+%%%
+% This is where the body of the document goes
+%%%
+\begin{document}
+	\setheader{Math 281-1}{Gradients, Directional Derivatives, and Limits}
+	
+	Problems are from Stewart's \textit{Essential Calculus: Early Transcendentals 2nd Ed.} or from Evans's \textit{ISP Mathematics 281 Volume I}. 	
+	
+	\textbf{Limits}
+	\begin{enumerate}
+		\item Stewart 11.2 3, 5, 11, 15
+		\item Stewart 11.2 17
+		\item Stewart 11.2 29, 31
+		\item Evans 3.2 1, 2
+	\end{enumerate}	
+	\textbf{Directional Derivatives and Gradients}
+	\begin{enumerate}
+		\item Stewart 11.6 1, 2
+		\item Stewart 11.6 3-6
+		\item Stewart 11.6 15, 17
+		\item Stewart 11.6 19
+		\item Stewart 11.6 21
+		\item Stewart 11.6 25
+		\item Stewart 11.6 29
+		\item Stewart 11.6 30
+		\item Stewart 11.6 31, 33, 35
+		\item Stewart 11.6 42
+		\item Stewart 11.6 45
+		\item Evans 3.3 1
+		\item Evans 3.3 2
+		\item Evans 3.3 4
+		\item Evans 3.4 4
+		\item Evans 3.3 6
+		\item Evans 3.3 8 
+	\end{enumerate}
+\end{document}
