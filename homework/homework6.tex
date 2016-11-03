@@ -95,6 +95,12 @@
 				Is this statement true or false?  Explain.
 		\end{enumerate}
 		\item {\sc Multivariable chain rule}.
+			The idea of this problem is to discover and prove the multi-variable chain rule.
+			For this problem, you may assume that the linear approximation to a differentiable 
+			function $f:\R^n\to\R$
+			at the point $\vec a$ is given by $L_{\vec a}(\vec x)=f(\vec a)+\nabla f(\vec a)\cdot (\vec x-\vec a)$.  However,
+			please don't use any formula for the multi-variable chain rule that is in your notes. If
+			we use that formula, the derivation of the chain rule would be circular!
 			\begin{enumerate}
 				\item Let $L(x,y)=ax+by+c$ for some unknown constants $a,b,c\in\R$.  Notice
 					the graph of $z=L(x,y)$ is a plane.  Let $\vec p(t) = (p_x(t), p_y(t))$
@@ -108,7 +114,7 @@
 					is that not only do they capture all
 					information about the value of a function at a point, they capture all information
 					about the first derivative of a function at a point.  That is, if
-					$\vec p:\R\to\R^2$ is a parameterization of a path so that $p(t_0)=\vec a$
+					$\vec p:\R\to\R^2$ is a parameterization of a path so that $\vec p(t_0)=\vec a$
 					and $L_{\vec a}$ is a linear approximation of $g$ at the point $\vec a$, then
 					\[
 						(g\circ \vec p)'(t_0) = (L_{\vec a}\circ \vec p)'(t_0).
